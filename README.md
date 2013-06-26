@@ -8,7 +8,7 @@ Forked from and entirely inspired by the brilliant [Flèche](https://github.com/
 * Install the [lesschrome modified](https://addons.mozilla.org/en-US/firefox/addon/lesschrome-modified/) extension.
 * RESTART FIREFOX
 * Go to your [Add-ons Manager](about:addons), select the User Styles page and then write a new style.
-* Give the style a name and paste the contents of browser_style.css.
+* Give the style a name and paste the contents of [browser_style.css](https://raw.github.com/offlineric/easymode/master/browser_style.css).
 * Seriously restart firefox if it looks wrong. If it still looks wrong after that, I guess you can use the issues tracker.
 
 * Customize toolbar and place the home button immediately to the left of urlbar or else it won't look closed on that side. 
@@ -22,7 +22,7 @@ Forked from and eentirely inspired by the brilliant [ribbon style](https://githu
 * Install the latest [4chan-x](http://seaweedchan.github.io/4chan-x/) from seaweed and zixaphir.
 * Install [4chan_userscript.user.js](https://github.com/offlineric/easymode/raw/master/4chan_userscript.user.js) in greasemonkey.
 * Go to your [Add-ons Manager](about:addons), select the User Styles page and then write a new style.
-* Give the style a name and paste the contents of 4chan_style.css.
+* Give the style a name and paste the contents of [4chan_style.css.](https://raw.github.com/offlineric/easymode/master/4chan_style.css)
 * If it looks wrong you can right click on [this](https://raw.github.com/offlineric/easymode/master/4chan_x_settings.json) and save it as 4chansettings.json, then import the settings in to your 4chan-x from the settings dialog.
 
 #Other recommended firefox extensions
