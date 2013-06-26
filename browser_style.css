@@ -613,5 +613,5 @@ scrollbar thumb:hover {
 	background-color: ButtonShadow;
 }
 
-splitter {display: none !important;}
+#verticaltabs-splitter {display: none !important;}
 
