@@ -34,3 +34,7 @@ Forked from and eentirely inspired by the brilliant [ribbon style](https://githu
 ## Notes
 * This theme is not complete yet, and still has bugs. If you find any, please feel free to fix them yourself ;) and send me your patches.
 * To resize history or various other panels you have to remove the last line of the style (#splitter {display none}) 
+
+#The Results
+![Firefox and 4chan should look like this when you finish](https://raw.github.com/offlineric/easymode/master/Screenshot%20from%202013-06-26%2009:06:55.png "The Results")
+* Firefox and 4chan should look like this (except for the window borders) when you finish. 
