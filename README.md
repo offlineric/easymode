@@ -20,16 +20,16 @@ Forked from and eentirely inspired by the brilliant [ribbon style](https://githu
 * Install the [Stylish](https://addons.mozilla.org/en-US/firefox/addon/stylish/) extension.
 * Install the [Greasemonkey](https://addons.mozilla.org/en-US/firefox/addon/greasemonkey/) extension.
 * Install the latest [4chan-x](http://seaweedchan.github.io/4chan-x/) from seaweed and zixaphir.
-* Install 4chan_userscript.user.js in greasemonkey.
+* Install [4chan_userscript.user.js](https://github.com/offlineric/easymode/raw/master/4chan_userscript.user.js) in greasemonkey.
 * Go to your [Add-ons Manager](about:addons), select the User Styles page and then write a new style.
 * Give the style a name and paste the contents of 4chan_style.css.
-* If it looks wrong you can try saving and importing my 4chan_x_settings.json file in to your 4chan-x.
+* If it looks wrong you can right click on [this](https://raw.github.com/offlineric/easymode/master/4chan_x_settings.json) and save it as 4chansettings.json, then import the settings in to your 4chan-x from the settings dialog.
 
 ###Other recommended firefox extensions
-* Download Statusbar
-* Status-4-evar
-* Moveable firefox button
-* Yet another smooth scrolling
+* [Download Statusbar](https://addons.mozilla.org/en-us/firefox/addon/download-statusbar/)
+* [Status-4-evar](https://addons.mozilla.org/en-us/firefox/addon/status-4-evar/)
+* [Moveable firefox button](https://addons.mozilla.org/en-us/firefox/addon/movable-firefox-button/)
+* [Yet another smooth scrolling](https://addons.mozilla.org/en-us/firefox/addon/yet-another-smooth-scrolling/)
 
 ## Notes
 * This theme is not complete yet, and still has bugs. If you find any, please feel free to fix them yourself ;) and send me your patches.
