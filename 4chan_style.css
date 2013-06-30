@@ -3,8 +3,15 @@
 @-moz-document domain("boards.4chan.org") { 
     *                                       { font-family: liberation sans !important;
     }
+#qr-file-spoiler { margin-top: 0px !important; }
+#qr-spoiler-label { background: #fff !important; border: 1px solid #ccc !important; margin-top: 1px !important; margin-left: -5px !important; padding-right: 1px !important; padding-bottom: 3px !important; padding-left: 0px !important; z-index: -3 !important;}
+.captcha-input.field {z-index: 3000 !important;}
 #custom-board-list {padding-left: 3px; padding-top: 1px; float:left !important; margin-bottom:-1px;}
-  
+
+#fourchanx-settings {background: #fff !important; border-radius: 5px !important;border: 1px solid #aaa !important; box-shadow: 0px 2px 8px rgba(0,0,0,.8) !important;}
+.dialog nav {padding-left: 0px; padding-bottom: 7px !important;border-bottom: 1px solid #aaa !important; margin-left: 4px; margin-right: 9px;}  
+fieldset {border-color: #aaa !important;}
+
  #globalMessage > * {font: 400 8pt Comfortaa !important;}
  #globalMessage {font: 400 8pt Comfortaa !important; position: absolute !important; top: 3px; z-index: 500!important;color: white !important; padding-left: 130px; text-align: left !important; padding-right: 330px; }
  #globalMessage a {color: #b2b6bf !important; text-decoration: none !important; }
@@ -353,7 +360,8 @@ perspective-origin: 50% 10%;}
                                              background-image: -moz-linear-gradient(#ccc, #d8d8d8)!important;
                                              z-index: 20 !important;
                                              pointer-events: none !important;
-                                             border: 1px solid #ddd!important;
+                                             border-bottom: 1px solid #ddd!important;
+                                             border-left: none !important;
                                              background: #f0f0f0 !important;
                                              pointer-events: auto !important;
                                              text-shadow: 0px 1px 1px #eee !important;
@@ -670,7 +678,7 @@ perspective-origin: 50% 10%;}
                                              margin-top: 6px !important;
                                              padding-right: .25%!important; padding-left: .25%!important;
                                              background-color: #dededf !important; background-color: #fafafa !important;
-                                             border: 1px solid #eee; border-top: 1px solid #fff !important; border-bottom: 1px solid #eee !important;
+                                             border: 1px solid #eee; border-top: 1px solid #111 !important; border-bottom: 1px solid #eee !important;
                                              background-image: -moz-linear-gradient(#fbfbfb, #fdfdfd)!important;
                                              z-index: 0 !important;
                                              box-shadow: 0px 1px 2px -1px rgba(0,0,0,0.2) !important;
@@ -678,9 +686,9 @@ perspective-origin: 50% 10%;}
                                              background: #fff !important;
 padding-top: 5px;border-top: solid 1px #eee !important; padding-bottom: 2px;
                                             }
-    .postContainer:nth-of-type(even)        { background-image: -moz-linear-gradient(#f6f6f6, #f8f9f9)!important ;
-                                                background: #fff !important; border-top: solid 1px #eee !important;}
-    /*.postContainer:nth-of-type(odd) {
+    /*.postContainer:nth-of-type(even)        { background-image: -moz-linear-gradient(#f6f6f6, #f8f9f9)!important ;
+                                                background: #f6f6f6 !important; border-top: solid 1px #eee !important;}
+    .postContainer:nth-of-type(odd) {
             background-color: #fafffa !important;
         }*/
     .post.op .postMessage
@@ -901,10 +909,13 @@ background-position: right top !important;                                      
                                              transform: rotate(0deg);
                                              pointer-events: auto;
                                             }
-    #dump-button
+    #qr-filerm                              {
+                                             padding-top: 2px !important;
+                                            }
+    #dump-button, #qr-filerm
                                             {
                                              float: left !important;
-                                             height: 21px !important;
+                                             height: 20px !important;
                                              margin-bottom: -2px !important;
                                              color: #aaa !important;
                                              background: #fff !important
@@ -927,7 +938,7 @@ background-position: right top !important;                                      
         #custom-board-list a.current {color: #666 !important;}
         #custom-board-list a:hover {color: black !important;}
         .inline {border: none !important;}
-   
+
 
 @-moz-document regexp("https://boards\\.4chan\\.org\\/(.|..|...)\\/catalog") { 
     body
@@ -939,6 +950,13 @@ background-position: right top !important;                                      
                              background: transparent !important;
 
                             }
+                            
+    #header-bar.dialog {margin-left: 10px !important; margin-right: 10px !important;}  
+    #header-bar.dialog.fixed {position: fixed !important ;top: 0px !important; 
+    ; box-shadow: none !important;
+    margin: 0 !important;
+    }
+        
     #togglePostForm
                             {
                              margin-top: 35px!important; margin-bottom: -45px!important
