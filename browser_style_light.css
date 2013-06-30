@@ -1,7 +1,11 @@
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
+#main-window[sizemode="maximized"] {margin-top: -2px !important; }
+#main-window[sizemode="maximized"] #nav-bar { padding-top: 6px !important; }
+#main-window[sizemode="maximized"] #home-button {margin-top: 3px !important; margin-bottom: 3px !important;}
+
 browser {margin-bottom: 8px !important ;     border-left: 1px solid #d2d3d4 !important; border-top: 1px solid #d2d3d4 !important;}
-  /* swap text & close button */
+	/* swap text & close button */
 	.tabbrowser-tab .tab {
 	  -moz-box-ordinal-group: 3 !important;
 	}
@@ -94,7 +98,7 @@ filter: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi
 #go-button {
     display: none !important;
 }
-#navigator-toolbox {margin-left: 28px !important; margin-right: 0px !important; box-shadow: none !important; z-index: 0 !important; }
+#navigator-toolbox {margin-left: 27px !important; margin-right: 0px !important; box-shadow: none !important; z-index: 0 !important; }
 #identity-box {
     -moz-appearance: none !important;
     border: none !important;
@@ -115,15 +119,16 @@ transition: all .7s ease .2s !important;
     border-right: 0px solid #d2d3d4 !important;
     border-bottom-left-radius: 0px ;
     border-bottom-right-radius: 0px ;
-    margin-top: -1px !important;
+    margin-top: -2px !important;
+
     margin-left: 192px !important;
     margin-left: 0px !important;
     margin-right: 0px !important;
     padding-right: 8px !important;
     padding-left: 8px !important;
-    padding-top: 0 !important;
+    padding-top: 4px !important;
     padding-bottom: 0px !important;
-    height: 38px !important;
+    height: 39px !important;
     opacity: 1 !important;
     z-index: 9001 !important;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 1px 2px 0px !important;
@@ -135,7 +140,7 @@ transition: all .7s ease .2s !important;
 
     display: none !important;
 }
-#navigator-toolbox {transition: all .2s ease .2s !important; transition-delay: .6s !important;}
+#navigator-toolbox {transition: all .2s ease .2s !important; transition-delay: .6s !important; margin-top: -3px !important;}
 
 #addon-bar {
     background: #ededeb !important;
@@ -155,7 +160,7 @@ transition: all .7s ease .2s !important;
     padding-left: 2px !important;
     margin-left: 4px !important;
     margin-right: 4px !important;
-    height: 28px !important;
+    height: 20px !important;
     border-left: 0 !important;
     border-top-left-radius: 0px !important;
     border-bottom-left-radius:0px !important;
@@ -197,6 +202,9 @@ transition: all .7s ease .2s !important;
 
 .tabs-newtab-button:active {
     background: #252629 !important;
+        border: 1px solid #222 !important;
+    border-left: 0px solid #d2d3d4 !important;
+    border-right: 0px solid #d2d3d4 !important;
     box-shadow: inset 0px 0px 2px rgba(0,0,0,0.1) !important;
     border-top-color: transparent !important;
     border-bottom-color: rgba(255,255,255,0.1) !important;
@@ -218,7 +226,7 @@ transition: all .7s ease .2s !important;
     min-width: 328px !important;
     max-width: 328px !important;
     overflow: hidden !important;
-    margin-right: -300px !important;
+    margin-right: -301px !important;
 
 }
 .tabbrowser-tab > .tab-stack {
@@ -434,7 +442,7 @@ margin-right: 0 !important;
     -moz-image-region: rect(0,16px,16px,0) !important;
 }
 
-    #home-button {padding-right: 0px !important; padding-left: 2px !important; padding-top: 4px !important; margin-top: 4px !important; margin-bottom: 4px !important; padding-bottom: 4px !important; margin-right: -5px !important; background: white !important;
+    #home-button {padding-right: 0px !important; padding-left: 2px !important; padding-top: 0px !important; margin-top: 4px !important; margin-bottom: 4px !important; padding-bottom: 0px !important; margin-right: -5px !important; background: white !important;
    
     
     border: 1px solid #d2d3d4 !important;
