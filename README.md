@@ -5,10 +5,10 @@ Forked from and entirely inspired by the brilliant [Flèche](https://github.com/
 * Install the [Stylish](https://addons.mozilla.org/en-US/firefox/addon/stylish/) extension.
 * Install the [FXChrome](https://addons.mozilla.org/en-US/firefox/addon/fxchrome/) theme.
 * Install the [Vertical Tabs](https://addons.mozilla.org/en-us/firefox/addon/vertical-tabs/) extension.
-* Install the [lesschrome modified](https://addons.mozilla.org/en-US/firefox/addon/lesschrome-modified/) extension.
+* Install the [Mozilla labs lesschrome](https://addons.mozilla.org/en-US/firefox/addon/prospector-lessChrome-HD/) extension.
 * RESTART FIREFOX
 * Go to your [Add-ons Manager](about:addons), select the User Styles page and then write a new style.
-* Give the style a name and paste the contents of [browser_style.css](https://raw.github.com/offlineric/easymode/master/browser_style.css).
+* Give the style a name and paste the contents of [browser_style.css](https://raw.github.com/offlineric/easymode/master/browser_style.css). Or [browser_style_light.css](https://github.com/offlineric/easymode/master/browser_style_light.css) if you prefer.
 * Seriously restart firefox if it looks wrong. If it still looks wrong after that, I guess you can use the issues tracker.
 
 * Customize toolbar and place the home button immediately to the left of urlbar or else it won't look closed on that side. 
