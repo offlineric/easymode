@@ -3,7 +3,10 @@
 @-moz-document domain("boards.4chan.org") { 
     *                                       { font-family: liberation sans !important;
     }
+    a.quotelink.inlined {color: #2222aa !important;}
+    .ad-plea-middle, .ad-plea-top, .ad-plea-bottom{display:none !important;}
 #qr-file-spoiler { margin-top: 0px !important; }
+#qr-filename {overflow: hidden !important; height: 16px !important;}
 #qr-spoiler-label { background: #fff !important; border: 1px solid #ccc !important; margin-top: 1px !important; margin-left: -5px !important; padding-right: 1px !important; padding-bottom: 3px !important; padding-left: 0px !important; z-index: -3 !important;}
 .captcha-input.field {z-index: 3000 !important;}
 #custom-board-list {padding-left: 3px; padding-top: 1px; float:left !important; margin-bottom:-1px;}
@@ -30,7 +33,8 @@ perspective-origin: 50% 10%;}
 .come-in:nth-child(odd) {
   animation-duration: .9s; /* So they look staggered */
 }
-#qp > .come-in {transform: translateY(0%) ; opacity: .05;}
+#qp > .come-in {transform: translateY(0%) ; opacity: .05; animation: come-in .75s ease-out forwards;}
+.inline > .come-in {transform: translateY(0%) scale(.5); opacity: .05; animation: come-in .3s ease-out forwards;}
 @keyframes come-in {
 
 
@@ -135,8 +139,9 @@ perspective-origin: 50% 10%;}
     .replyContainer .highlight,
     .replyContainer .qphl
                                             {
-                                             border-left: inset 4px #669 !important;
+                                             
                                              box-shadow: inset 0 1px 0 hsla(240, 10%, 100%, 0.125), inset 0 0 75px hsla(240, 10%, 50%, 0.25), inset 0 0 200px hsla(240, 10%, 100%, 0.375) !important;
+                                               box-shadow: 0px 5px 10px #999faa !important;
                                              outline-color: transparent !important;
                                             }
     /*General colors*/
@@ -375,7 +380,7 @@ perspective-origin: 50% 10%;}
                                              position: absolute !important;
                                                 top: 90px !important;
                                              padding-right: 0px ;
-
+                                            height: 14px !important;
 
                                             }
                                             
@@ -836,6 +841,9 @@ background-position: right top !important;                                      
                                              z-index: 1;
 
                                             }
+   .field[data-name="name"]   {border-top-left-radius: 2px !important;}
+   .field[data-name="sub"]   {border-top-right-radius: 2px !important;}
+   #qr-filename-container.field {border-bottom-left-radius: 2px !important;}
     #qr input[type="submit"]
                                             {
                                              position: absolute !important; float: right !important;
@@ -850,14 +858,10 @@ background-position: right top !important;                                      
                                              background: #fff !important;
                                              border: solid #ccc 1px !important;
                                              border-left: solid #ccc 0px!important;
+                                             border-bottom-right-radius: 2px !important;
                                             }
     #qr [type="submit"]                     { background: transparent!important }
-    #qr:hover > form
-                                            {
-                                             right: 7px !important; bottom: 0px !important;
-                                             transform: rotate(0deg);
-                                             pointer-events: auto;
-                                            }
+   
     #qr input
                                             {
                                              margin-right: -1px !important; margin-bottom: -1px!important
@@ -895,20 +899,20 @@ background-position: right top !important;                                      
                                              border: 1px solid #ccc !important;
                                              background-image: -moz-linear-gradient(#f6f6f6, #f7f7f7)!important;
                                              background: #ebeced !important;
+                                             background: transparent !important;
+                                             border: none !important;
                                              pointer-events: none;
                                             }
-    #qr form:hover
+    #qr form:hover,
+    #qr.has-focus > form,
+    #qr:hover > form
                                             {
-                                             right: 7px !important; bottom: 0px !important;
+                                             right: 3px !important; bottom: -11px !important;
                                              transform: rotate(0deg);
                                              pointer-events: auto;
                                             }
-    #qr.has-focus > form
-                                            {
-                                             right: 7px !important; bottom: 0px !important;
-                                             transform: rotate(0deg);
-                                             pointer-events: auto;
-                                            }
+
+                                       
     #qr-filerm                              {
                                              padding-top: 2px !important;
                                             }
