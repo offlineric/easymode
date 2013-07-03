@@ -1,6 +1,7 @@
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
 #main-window[sizemode="maximized"] {margin-top: -2px !important; }
+
 #main-window[sizemode="maximized"] #nav-bar { padding-top: 6px !important; }
 #main-window[sizemode="maximized"] #home-button {margin-top: 3px !important; margin-bottom: 3px !important;}
 
@@ -98,7 +99,7 @@ filter: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi
 #go-button {
     display: none !important;
 }
-#navigator-toolbox {margin-left: 27px !important; margin-right: 0px !important; box-shadow: none !important; z-index: 0 !important; }
+#navigator-toolbox {margin-left: 22px !important; margin-right: 0px !important; box-shadow: none !important; z-index: 0 !important; }
 #identity-box {
     -moz-appearance: none !important;
     border: none !important;
@@ -119,7 +120,7 @@ transition: all .7s ease .2s !important;
     border-right: 0px solid #d2d3d4 !important;
     border-bottom-left-radius: 0px ;
     border-bottom-right-radius: 0px ;
-    margin-top: -2px !important;
+    margin-top: 0px !important;
 
     margin-left: 192px !important;
     margin-left: 0px !important;
@@ -226,7 +227,7 @@ transition: all .7s ease .2s !important;
     min-width: 328px !important;
     max-width: 328px !important;
     overflow: hidden !important;
-    margin-right: -301px !important;
+    margin-right: -306px !important;
 
 }
 .tabbrowser-tab > .tab-stack {
@@ -247,14 +248,14 @@ transition: all .7s ease .2s !important;
     margin: 0px !important;
 
     padding: 0px !important;
-
+    border-top: 1px solid transparent !important;
 
     margin-bottom: 0px !important;
     background: transparent !important;
-    padding-left: 5px !important;
+    padding-left: 2px !important;
     margin-top: 0px !important;
     max-height: 11px !important;
-    min-height: 21px !important;
+    min-height: 22px !important;
     
 
 }
@@ -280,30 +281,34 @@ z-index: 100 !important;}
 
 }
 
+
 .tabbrowser-tab[selected=true], .tabbrowser-tab[selected=true]:hover {
     background: #ebeced !important;
     background: #4c7bd9 !important;
     background:  #999faa !important;
     background: #c0dbff !important;
-        box-shadow: 0px 0px 2px rgba(0,0,0,0.2) !important;
+    border-top: 1px solid #d2d3d4 !important;
+    border-bottom: 1px solid #d2d3d4 !important;
 
 }
 
+.tabbrowser-tab:first-of-type[selected=true] {border-top: 1px solid transparent !important;}
 .tab-text {
     font-size: 8pt !important;
     text-align: center !important;
     color: rgba(255,255,255,0.4) !important;
     color: #b4b8c3 !important;
     margin-left: 1px !important;
-    margin-right: 1px !important;
-    padding: 3px !important;
+
+    margin-top: -2px !important;
+    padding: 2px !important;
     margin-bottom: 0px !important;
     background: rgba(10,10,10,.8) !important;
     border-radius: 4px !important;
-    margin-right: auto !important;
+
     opacity: 0 ;
-    margin-left: 5px !important;
-    
+    margin-left: 2px !important;
+
 }
 .tabbrowser-tab {    margin-right: 300px !important;
    min-width: 0px !important;
@@ -334,6 +339,7 @@ margin-right: 0 !important;
 }*/
 .tabbrowser-tab[selected="true"] .tab-icon-image {filter: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CgogPGZpbHRlciBpZD0iZ3JleXNjYWxlIj4KCjxmZUNvbG9yTWF0cml4IHR5cGU9Im1hdHJpeCIgdmFsdWVzPSIxLjAwMDAgMS4wMDAwIDEuMDAwMCAwIDAKCiAxLjAwMDAgMS4wMDAwIDEuMDAwMCAwIDAKCiAxLjAwMDAgMS4wMDAwIDEuMDAwMCAwIDAKCiAwICAwICAwICAxIDAiLz4KCiA8L2ZpbHRlcj4KCiA8L3N2Zz4K#greyscale);}
 
+.tab-icon-image {margin-top: -2px !important;}
 /*Disable FXChrome tab background for tabs*/
 .tab-content {
     border: none !important;
