@@ -1,11 +1,23 @@
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
-#main-window[sizemode="maximized"] {margin-top: -2px !important; }
+/*remove all lines that have the word filter in them if you don't like desaturated icons */
 
+
+/*fixes for weirdness on my setup not sure if you will need these*/
+#main-window[sizemode="maximized"] {margin-top: -2px !important; }
 #main-window[sizemode="maximized"] #nav-bar { padding-top: 6px !important; }
 #main-window[sizemode="maximized"] #home-button {margin-top: 3px !important; margin-bottom: 3px !important;}
+browser {margin-bottom: 8px !important ;     
+/*end of weirdness fixes*/
+border-left: 1px solid #d2d3d4 !important; 
+border-top: 1px solid #d2d3d4 !important; 
+}
 
-browser {margin-bottom: 8px !important ;     border-left: 1px solid #d2d3d4 !important; border-top: 1px solid #d2d3d4 !important;}
+/* comment this out if you don't like or use the lesschrome extension to hide the nav-bar */
+#navigator-toolbox {margin-left: 22px !important;}
+
+
+
 	/* swap text & close button */
 	.tabbrowser-tab .tab {
 	  -moz-box-ordinal-group: 3 !important;
@@ -68,6 +80,7 @@ tab[busy] .tab-icon-image
 {
   filter: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CgogPGZpbHRlciBpZD0iZ3JleXNjYWxlIj4KCjxmZUNvbG9yTWF0cml4IHR5cGU9Im1hdHJpeCIgdmFsdWVzPSIxLjAwMDAgMS4wMDAwIDEuMDAwMCAwIDAKCiAxLjAwMDAgMS4wMDAwIDEuMDAwMCAwIDAKCiAxLjAwMDAgMS4wMDAwIDEuMDAwMCAwIDAKCiAwICAwICAwICAxIDAiLz4KCiA8L2ZpbHRlcj4KCiA8L3N2Zz4K#greyscale);
 }
+.tabbrowser-tab[selected="true"] .tab-icon-image {filter: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CgogPGZpbHRlciBpZD0iZ3JleXNjYWxlIj4KCjxmZUNvbG9yTWF0cml4IHR5cGU9Im1hdHJpeCIgdmFsdWVzPSIxLjAwMDAgMS4wMDAwIDEuMDAwMCAwIDAKCiAxLjAwMDAgMS4wMDAwIDEuMDAwMCAwIDAKCiAxLjAwMDAgMS4wMDAwIDEuMDAwMCAwIDAKCiAwICAwICAwICAxIDAiLz4KCiA8L2ZpbHRlcj4KCiA8L3N2Zz4K#greyscale);}
 
 /* ::::: Places Style Throbber (Code for Firefox 4 beta 1-6) ::::: */
 
@@ -99,7 +112,7 @@ filter: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi
 #go-button {
     display: none !important;
 }
-#navigator-toolbox {margin-left: 22px !important; margin-right: 0px !important; box-shadow: none !important; z-index: 0 !important; }
+#navigator-toolbox { margin-right: 0px !important; box-shadow: none !important; z-index: 0 !important; }
 #identity-box {
     -moz-appearance: none !important;
     border: none !important;
@@ -162,13 +175,15 @@ transition: all .7s ease .2s !important;
     margin-left: 4px !important;
     margin-right: 4px !important;
     height: 20px !important;
-    border-left: 0 !important;
-    border-top-left-radius: 0px !important;
-    border-bottom-left-radius:0px !important;
+
+
     
 }
 
-
+/*remove left border on urlbar for integration with home button */
+#urlbar {    border-left: 0 !important; 
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius:0px !important;}
 
 #searchbar .searchbar-textbox {
     font-size: 10pt !important;
@@ -212,6 +227,8 @@ transition: all .7s ease .2s !important;
 
 }
 
+/*set colors and size of the tabs sidebar here */
+
 #tabbrowser-tabs {
     background: #37393d !important;
     border: none !important;
@@ -219,14 +236,18 @@ transition: all .7s ease .2s !important;
     margin-top: 0px !important;
     background: #484a4e !important;
     background: #ebeced !important;
+        background: #ebeced !important;
     background: #f6f6f6 !important;
+
     padding-left: 0px !important;
     padding-right: 0px !important;
     padding-bottom: 0 !important;
     padding-top: 0px !important;
+    /*increase the width of the popups by making this larger*/
     min-width: 328px !important;
     max-width: 328px !important;
     overflow: hidden !important;
+    /*increase visible width by decreasing this margin*/
     margin-right: -306px !important;
 
 }
@@ -244,7 +265,7 @@ transition: all .7s ease .2s !important;
 .tabbrowser-tab {
     border: none !important;
     border-radius: 0px !important;
-    background: #505257 !important;
+
     margin: 0px !important;
 
     padding: 0px !important;
@@ -252,6 +273,9 @@ transition: all .7s ease .2s !important;
 
     margin-bottom: 0px !important;
     background: transparent !important;
+        background: #505257 !important; /*dark example*/
+        background: #f6f6f6 !important; /*light example*/
+
     padding-left: 2px !important;
     margin-top: 0px !important;
     max-height: 11px !important;
@@ -259,6 +283,8 @@ transition: all .7s ease .2s !important;
     
 
 }
+
+/* vvvvv  cruft probably safe to remove this entirely  vvvvv */
 
 .tabbrowser-tab:first-child:before { content: "Open Tabs"; content: " " ;position: fixed; margin-top: -19px ;
 margin-left: -10px;
@@ -270,15 +296,14 @@ z-index: 100 !important;}
 
 
 .tabbrowser-tab:last-child {
-
+box-shadow: 0px 2px 2px rgba(0,0,0,.2) !important;
+box-shadow: none !important;
 }
 
 .tabbrowser-tab:hover {
     background: #6f737f !important;
     background: #56585e !important;
     background: transparent !important;
-
-
 }
 
 
@@ -289,10 +314,15 @@ z-index: 100 !important;}
     background: #c0dbff !important;
     border-top: 1px solid #d2d3d4 !important;
     border-bottom: 1px solid #d2d3d4 !important;
+            box-shadow: inset 0px 1px 1px rgba(255,255,255,.6),
+                     0px 1px 4px rgba(0,0,0,.1)!important;
 
 }
 
-.tabbrowser-tab:first-of-type[selected=true] {border-top: 1px solid transparent !important;}
+.tabbrowser-tab:first-of-type[selected=true] {border-top: 1px solid rgba(255,255,255,.4) !important;
+box-shadow: 0px 1px 4px rgba(0,0,0,.1)!important;}
+
+/*how the popup text will look*/
 .tab-text {
     font-size: 8pt !important;
     text-align: center !important;
@@ -337,7 +367,9 @@ margin-right: 0 !important;
     background-position: right center;
     background-repeat: no-repeat;
 }*/
-.tabbrowser-tab[selected="true"] .tab-icon-image {filter: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CgogPGZpbHRlciBpZD0iZ3JleXNjYWxlIj4KCjxmZUNvbG9yTWF0cml4IHR5cGU9Im1hdHJpeCIgdmFsdWVzPSIxLjAwMDAgMS4wMDAwIDEuMDAwMCAwIDAKCiAxLjAwMDAgMS4wMDAwIDEuMDAwMCAwIDAKCiAxLjAwMDAgMS4wMDAwIDEuMDAwMCAwIDAKCiAwICAwICAwICAxIDAiLz4KCiA8L2ZpbHRlcj4KCiA8L3N2Zz4K#greyscale);}
+
+
+
 
 .tab-icon-image {margin-top: -2px !important;}
 /*Disable FXChrome tab background for tabs*/
