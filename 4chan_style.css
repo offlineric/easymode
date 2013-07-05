@@ -1,5 +1,4 @@
 
-
 @-moz-document domain("boards.4chan.org") { 
     *                                       { font-family: liberation sans !important;
     }
@@ -9,7 +8,7 @@
 #qr-filename {overflow: hidden !important; height: 16px !important;}
 #qr-spoiler-label { background: #fff !important; border: 1px solid #ccc !important; margin-top: 1px !important; margin-left: -5px !important; padding-right: 1px !important; padding-bottom: 3px !important; padding-left: 0px !important; z-index: -3 !important;}
 .captcha-input.field {z-index: 3000 !important;}
-#custom-board-list {padding-left: 3px; padding-top: 1px; float:left !important; margin-bottom:-1px;}
+#custom-board-list {padding-left: 3px; padding-top: 1px; float:left !important; margin-bottom:-1px; text-shadow: 1px 1px 1px rgba(255,255,255,.8) !important;}
 
 #fourchanx-settings {background: #fff !important; border-radius: 5px !important;border: 1px solid #aaa !important; box-shadow: 0px 2px 8px rgba(0,0,0,.8) !important;}
 .dialog nav {padding-left: 0px; padding-bottom: 7px !important;border-bottom: 1px solid #aaa !important; margin-left: 4px; margin-right: 9px;}  
@@ -143,6 +142,7 @@ perspective-origin: 50% 10%;}
                                              box-shadow: inset 0 1px 0 hsla(240, 10%, 100%, 0.125), inset 0 0 75px hsla(240, 10%, 50%, 0.25), inset 0 0 200px hsla(240, 10%, 100%, 0.375) !important;
                                                box-shadow: 0px 5px 10px #999faa !important;
                                              outline-color: transparent !important;
+                                             box-shadow: -5px 0px 2px -3px rgba(10,150,200,.7) !important;
                                             }
     /*General colors*/
     a.useremail[href*='sage']:last-of-type::after,
@@ -386,6 +386,9 @@ perspective-origin: 50% 10%;}
                                             
     #header-bar.fixed {position: fixed !important ;top: 0px !important; 
     ; box-shadow: none !important;
+        box-shadow: inset 1px 1px 1px rgba(255,255,255,.6),
+
+                     0px 1px 4px rgba(0,0,0,.1)!important;
     animation: fix-in .3s ease-in forwards !important;
     }
 @keyframes fix-in {
@@ -690,6 +693,7 @@ perspective-origin: 50% 10%;}
                                              border-radius: 5px !important;
                                              background: #fff !important;
 padding-top: 5px;border-top: solid 1px #eee !important; padding-bottom: 2px;
+                                             box-shadow: 0px 2px 4px -2px rgba(0,0,0,0.1) !important;
                                             }
     /*.postContainer:nth-of-type(even)        { background-image: -moz-linear-gradient(#f6f6f6, #f8f9f9)!important ;
                                                 background: #f6f6f6 !important; border-top: solid 1px #eee !important;}
