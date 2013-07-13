@@ -1,6 +1,6 @@
 
 @-moz-document domain("boards.4chan.org") { 
-    *                                       { font-family: liberation sans !important;
+    *                                       { font-family: droid sans !important;
     }
     a.quotelink.inlined {color: #2222aa !important;}
     .ad-plea-middle, .ad-plea-top, .ad-plea-bottom{display:none !important;}
@@ -62,7 +62,7 @@ perspective-origin: 50% 10%;}
                                              background-color: transparent !important; color: #999faa !important;
                                              font-size: 9pt !important;
                                              border: none !important;
-                                             font-family: Liberation Sans !important;
+                                             font-family: Droid Sans !important;
                                             }
     .pagelist strong
                                             {
@@ -143,7 +143,12 @@ perspective-origin: 50% 10%;}
                                                box-shadow: 0px 5px 10px #999faa !important;
                                              outline-color: transparent !important;
                                              box-shadow: -5px 0px 2px -3px rgba(10,150,200,.7) !important;
+                                             box-shadow: none !important;
                                             }
+    .postContainer .qphl
+                {
+                                             box-shadow: 0px 0px 5px 3px #a1c1ff !important;}
+    .postContainer.quotesYou {box-shadow: -5px 0px 5px -3px #a1c1ff !important;}
     /*General colors*/
     a.useremail[href*='sage']:last-of-type::after,
     a.useremail[href*='Sage']:last-of-type::after,
@@ -304,6 +309,7 @@ perspective-origin: 50% 10%;}
 
                                              margin-top: 0px !important;
                                              padding-top: 10px !important;
+                                             margin-bottom: -10px !important;
 
 
                                             }
@@ -337,11 +343,12 @@ perspective-origin: 50% 10%;}
     div.navLinksBot                         { display: none !important }
     body
                                             {
-
-                                             left: 5px; right: 5px;
-                                             margin: 0px !important;margin-top: 0px!important; margin-right: 12px !important; margin-left: 10px!important;
+                                                width: 100% !important;
+                                             left: 0px; right: 0px;
+                                             margin: 0px !important;margin-top: 0px!important; margin-right: 0px !important; margin-left: 0px!important;
                                              padding-top: 0px !important;
                                               padding: 0px !important;  padding-bottom: 15px !important;
+                                              padding-right: 27px !important;
                                              background: #dddeee !important;
                                              /*background-attachment: fixed !important;
                                              background-image: url(http://i.imgur.com/xpXZcoz.png)!important;*/
@@ -424,7 +431,7 @@ perspective-origin: 50% 10%;}
                                              color: transparent !important;
                                              font-size: 0 !important;
                                              z-index: 4 !important;
-                                             font-family: Liberation Sans !important;
+                                             font-family: Droid Sans !important;
                                             }
     a.settingsWindowLink::before
                                             {
@@ -462,7 +469,7 @@ perspective-origin: 50% 10%;}
     .field
                                             {
                                              font-size: 9pt !important;
-                                             font-family: Liberation Sans !important;
+                                             font-family: Droid Sans !important;
                                              background: #ffffff !important;
                                             }
     .prettyprint
@@ -500,7 +507,7 @@ perspective-origin: 50% 10%;}
                                              color: transparent !important;
                                              font-size: 0px !important;
                                              z-index: 1;
-                                             font-family: Liberation Sans!important;
+                                             font-family: Droid Sans!important;
                                             }
     .hide_reply_button a::before
                                             {
@@ -537,7 +544,7 @@ perspective-origin: 50% 10%;}
                                              margin-top: 0px !important; margin-right: 3px !important;
                                              color: transparent !important;
                                              font-size: 0px !important;
-                                             font-family: Liberation Sans !important
+                                             font-family: Droid Sans !important
                                             }
     .hide_reply_button.stub .menu_button::before
                                             { font-size: 0px !important }
@@ -546,14 +553,14 @@ perspective-origin: 50% 10%;}
                                             {
                                              color: transparent !important;
                                              font-size: 0px !important;
-                                             font-family: Liberation Sans !important
+                                             font-family: Droid Sans !important
                                             }
     .hide_reply_button.stub a
                                             {
                                              margin-left: 0px !important;
                                              color: #999faa !important;
                                              font-size: 9pt !important;
-                                             font-family: Liberation Sans !important
+                                             font-family: Droid Sans !important
                                             }
     .hide_reply_button.stub a:first-of-type::after
                                             {
@@ -562,7 +569,7 @@ perspective-origin: 50% 10%;}
                                              color: #999faa !important;
                                              font-size: 9pt !important;
                                              content: "+" !important;
-                                             font-family: Liberation Sans !important;
+                                             font-family: Droid Sans !important;
                                             }
     .hide_reply_button.stub a::before       { display: none !important }
     .favicon
@@ -595,7 +602,7 @@ perspective-origin: 50% 10%;}
                                              margin-top: -1px !important; margin-right: -1px !important; margin-left: 1px !important;
                                              color: transparent !important;
                                              font-size: 0px !important;
-                                             font-family: Liberation Sans !important
+                                             font-family: Droid Sans !important
                                             }
     a.menu-button::after
                                             {
@@ -633,7 +640,7 @@ perspective-origin: 50% 10%;}
                                              font-size: 8pt !important;
                                              background: #ffffff !important;
                                              border-color: #eceef0 !important;
-                                             font-family: Liberation Sans !important;
+                                             font-family: Droid Sans !important;
                                             }
     .entry:hover                            { color: #5c6066 !important }
     .opContainer
@@ -669,9 +676,11 @@ perspective-origin: 50% 10%;}
     .thread
                                             {
                                              display: table !important;
-                                             width: 100% !important;
+                                             padding-right: 0px !important;
                                              margin-top: 0px !important; margin-bottom: 1px !important;
-                                             margin: 0 auto !important;
+                                             margin: 0 !important;
+                                             left: 0px !important; right: 0px !important;
+                                            
                                              /*position: relative;*/
                                              background: transparent !important;
                                             }
@@ -681,10 +690,11 @@ perspective-origin: 50% 10%;}
                                             {
 
                                              position: relative !important; display: table;
-                                             left: 0% !important;
-                                             width: 99.5% !important;
-                                             margin-top: 6px !important;
-                                             padding-right: .25%!important; padding-left: .25%!important;
+                                             left: 10px !important; width: 100% !important;
+                                             margin: 0px !important;
+
+                                             margin-top: 6px !important; 
+                                             padding-right: 0px!important; padding-left: 6px!important;
                                              background-color: #dededf !important; background-color: #fafafa !important;
                                              border: 1px solid #eee; border-top: 1px solid #111 !important; border-bottom: 1px solid #eee !important;
                                              background-image: -moz-linear-gradient(#fbfbfb, #fdfdfd)!important;
@@ -692,8 +702,10 @@ perspective-origin: 50% 10%;}
                                              box-shadow: 0px 1px 2px -1px rgba(0,0,0,0.2) !important;
                                              border-radius: 5px !important;
                                              background: #fff !important;
-padding-top: 5px;border-top: solid 1px #eee !important; padding-bottom: 2px;
+padding-top: 3px;border-top: solid 1px #eee !important; padding-bottom: 6px;
                                              box-shadow: 0px 2px 4px -2px rgba(0,0,0,0.1) !important;
+                           
+
                                             }
     /*.postContainer:nth-of-type(even)        { background-image: -moz-linear-gradient(#f6f6f6, #f8f9f9)!important ;
                                                 background: #f6f6f6 !important; border-top: solid 1px #eee !important;}
@@ -845,9 +857,9 @@ background-position: right top !important;                                      
                                              z-index: 1;
 
                                             }
-   .field[data-name="name"]   {border-top-left-radius: 2px !important;}
-   .field[data-name="sub"]   {border-top-right-radius: 2px !important;}
-   #qr-filename-container.field {border-bottom-left-radius: 2px !important;}
+   .field[data-name="name"]   {border-top-left-radius: 4px !important;}
+   .field[data-name="sub"]   {border-top-right-radius: 4px !important;}
+   #qr-filename-container.field {border-bottom-left-radius: 4px !important;}
     #qr input[type="submit"]
                                             {
                                              position: absolute !important; float: right !important;
@@ -862,20 +874,20 @@ background-position: right top !important;                                      
                                              background: #fff !important;
                                              border: solid #ccc 1px !important;
                                              border-left: solid #ccc 0px!important;
-                                             border-bottom-right-radius: 2px !important;
+                                             border-bottom-right-radius: 4px !important;
                                             }
     #qr [type="submit"]                     { background: transparent!important }
    
     #qr input
                                             {
-                                             margin-right: -1px !important; margin-bottom: -1px!important
+                                             margin-right: -1px !important; margin-bottom: -1px!important; 
                                             }
     #qr .move
                                             {
                                              position: fixed !important;
                                              right: 0px !important; bottom: -20px !important;
                                              min-width: 15px !important; max-width: 18px !important; height: 20px !important;
-                                             margin-top: -1px !important; margin-right: 25px !important;
+                                             margin-top: -1px !important; margin-right: 35px !important;
                                              padding-top: 160px!important; padding-right: 150px !important; padding-bottom: 0px !important;
                                              background-color: transparent !important; color: transparent !important;
                                              font-size: 0px !important;
@@ -885,11 +897,12 @@ background-position: right top !important;                                      
     #qr form
                                             {
                                              position: fixed !important; float: right !important;
-                                             right: -7px !important; bottom: -248px;
+                                             right: 14px !important; bottom: 0;
                                              width: 400px !important;
                                              margin-bottom: 14px!important;
                                              padding-top: 5px !important; padding-right: 4px !important; padding-bottom: 4px !important; padding-left: 4px !important;
-                                             transform: rotate(90deg);
+                                             transform: rotate(0deg) translateY(110%);
+                                             opacity: .2;
 
                                              transform-origin: bottom right;
                                              z-index: 1 !important;
@@ -904,15 +917,22 @@ background-position: right top !important;                                      
                                              background-image: -moz-linear-gradient(#f6f6f6, #f7f7f7)!important;
                                              background: #ebeced !important;
                                              background: transparent !important;
-                                             border: none !important;
+                                             background: rgba(0,0,0,.2) !important;
+
+
+                                            border: none !important;
+                                             border: 1px solid rgba(0,0,0,.3)!important;
+                                             box-shadow: inset 1px 1px 1px rgba(255,255,255,.7),
+                                                         1px 1px 5px rgba(0,0,0,.4)!important;
                                              pointer-events: none;
                                             }
     #qr form:hover,
     #qr.has-focus > form,
-    #qr:hover > form
+     #qr:hover > form
                                             {
-                                             right: 3px !important; bottom: -11px !important;
-                                             transform: rotate(0deg);
+                                             right: 14px !important; bottom: 0px !important;
+                                             transform: rotate(0deg) translateY(0%);
+                                             opacity: 1;
                                              pointer-events: auto;
                                             }
 
@@ -946,7 +966,7 @@ background-position: right top !important;                                      
         #custom-board-list a.current {color: #666 !important;}
         #custom-board-list a:hover {color: black !important;}
         .inline {border: none !important;}
-
+        .postContainer .qphl {border-radius: 5px !important;}
 
 @-moz-document regexp("https://boards\\.4chan\\.org\\/(.|..|...)\\/catalog") { 
     body
@@ -954,7 +974,7 @@ background-position: right top !important;                                      
                              color: #3a3a3a !important;
                              font-size: 10pt !important;
                              background: #eceef0 !important;
-                             font-family: Liberation Sans !important;
+                             font-family: Droid Sans !important;
                              background: transparent !important;
 
                             }
@@ -1127,7 +1147,7 @@ background-position: right top !important;                                      
                                color: #3a3a3a !important;
                                font-size: 10pt !important;
                                background: #fff !important;
-                               font-family: Liberation Sans !important;
+                               font-family: Droid Sans !important;
                               }
     #pass > span,
     input[type="Submit"],
