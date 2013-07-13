@@ -2,6 +2,7 @@
 @-moz-document domain("boards.4chan.org") { 
     *                                       { font-family: droid sans !important;
     }
+    html {width: 100% !important;}
     a.quotelink.inlined {color: #2222aa !important;}
     .ad-plea-middle, .ad-plea-top, .ad-plea-bottom{display:none !important;}
 #qr-file-spoiler { margin-top: 0px !important; }
@@ -306,14 +307,14 @@ perspective-origin: 50% 10%;}
     .opContainer
                                             {
                                              display: table !important;
-
+                                             width: 100% !important;
                                              margin-top: 0px !important;
                                              padding-top: 10px !important;
                                              margin-bottom: -10px !important;
 
 
                                             }
-    .opContainer .container                 { margin-right: 0px !important }
+    .opContainer .container                 { margin-right: 0px !important; width: 100% !important; }
     div.reply
                                             {
                                              display: table !important;
@@ -343,7 +344,8 @@ perspective-origin: 50% 10%;}
     div.navLinksBot                         { display: none !important }
     body
                                             {
-                                                width: 100% !important;
+                                            
+
                                              left: 0px; right: 0px;
                                              margin: 0px !important;margin-top: 0px!important; margin-right: 0px !important; margin-left: 0px!important;
                                              padding-top: 0px !important;
@@ -353,6 +355,7 @@ perspective-origin: 50% 10%;}
                                              /*background-attachment: fixed !important;
                                              background-image: url(http://i.imgur.com/xpXZcoz.png)!important;*/
                                              background: #fff!important;
+                                             width: 100% !important;
                                             }
     #scroll-marker                          { height: 0px !important }
 
@@ -646,7 +649,7 @@ perspective-origin: 50% 10%;}
     .opContainer
                                             {
                                              display: table !important;
-                                             width: 98% !important; height: 100% !important;
+                                             width: 100% !important; height: 100% !important;
                                              margin-top: 10px !important;
                                              padding-top: 10px !important;
 
@@ -680,7 +683,7 @@ perspective-origin: 50% 10%;}
                                              margin-top: 0px !important; margin-bottom: 1px !important;
                                              margin: 0 !important;
                                              left: 0px !important; right: 0px !important;
-                                            
+                                            width: 100% !important;
                                              /*position: relative;*/
                                              background: transparent !important;
                                             }
@@ -762,6 +765,7 @@ padding-top: 3px;border-top: solid 1px #eee !important; padding-bottom: 6px;
                                             {
                                              margin-right: 0px !important; margin-left: 0px !important;
                                              background: transparent !important;
+                                             width: 100% !important;
                                              border: none !important;
                                             }
     .inline .menu_button                    { margin-right: 0px !important }
@@ -781,6 +785,7 @@ padding-top: 3px;border-top: solid 1px #eee !important; padding-bottom: 6px;
     #board-list
                                             {
                                              margin-right: auto !important; margin-left: auto !important;
+                                             width: 100% !important;
                                              pointer-events: auto !important
                                             }
 
@@ -967,6 +972,7 @@ background-position: right top !important;                                      
         #custom-board-list a:hover {color: black !important;}
         .inline {border: none !important;}
         .postContainer .qphl {border-radius: 5px !important;}
+        body {width: 100% !important;}
 
 @-moz-document regexp("https://boards\\.4chan\\.org\\/(.|..|...)\\/catalog") { 
     body
