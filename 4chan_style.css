@@ -1,6 +1,6 @@
 @-moz-document domain("boards.4chan.org") { 
     * {
-   font-family:droid sans !important;
+	font-family:droid sans !important;
 }
 
 a.quotelink.inlined {
@@ -171,9 +171,11 @@ fieldset {
 	background:transparent!important;
 	border:solid black 0px !important;
 	box-shadow:none !important;
-	margin-right:50px !important;
-	margin-left:-30px !important;
+	right:37px !important;
+	left:10px !important;
+	margin-top: 20px !important;
 	min-width:50% !important;
+	pointer-events: none;
 }
 
 #qp .postContainer {
@@ -1212,7 +1214,8 @@ span.menu-button i {
 	transition:all 0.7s ease .2s !important;
 	background:rgba(0,0,0,.2) !important;
 	background-image:-moz-linear-gradient(#f6f6f6, #f7f7f7)!important;
-
+background: #aaaaff!important;
+background: #8A9CA7 !important;
 	border-top-left-radius:4px !important;
 	border-top-right-radius:4px !important;
 	border-radius:4px !important;
