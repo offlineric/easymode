@@ -317,7 +317,7 @@ fieldset {
 
 .boardSubtitle {
 	position:absolute;
-	z-index:4000;
+	z-index:100;
 	top:45px;
 	right:5px;
 	color:#fff !important;
@@ -326,7 +326,7 @@ fieldset {
 }
 
 .boardSubtitle a:hover {
-	color:#3369ba !important;
+	color:#ffaaaa !important;
 }
 
 hr {
@@ -340,7 +340,10 @@ hr {
 }
 
 .postContainer.quotesYou {
-	box-shadow:-5px 0px 5px -3px #a1c1ff !important;
+/*	box-shadow: inset 5px 0px 5px -3px #a1c1ff !important;  */
+border-color: #a1c1ff !important;
+border-top: 4px solid #a1c1ff !important;
+border-bottom: 4px solid #a1c1ff !important;
 }
 
 a.useremail[href*='sage']:last-of-type::after, a.useremail[href*='Sage']:last-of-type::after, a.useremail[href*='SAGE']:last-of-type::after {
@@ -1378,7 +1381,7 @@ div#settings.mobilebtn, a#settingsWindowLink {
 	width:16px !important;
 	color:transparent !important;
 	font-size:0px !important;
-	z-index:3 !important;
+	z-index:3000 !important;
 	overflow:hidden !important;
 	background:#3369ba !important;
 	box-shadow:0px 6px 5px rgba(0,0,0,0.2) !important;
