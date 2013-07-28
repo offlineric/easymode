@@ -2,7 +2,8 @@
 
 /*remove all lines that have the word filter in them if you don't like desaturated icons */
 
-#statusbar-display * { color: #f6f6f6 !important; font-size: 8pt !important; font-weight: normal; }
+#statusbar-display * { color: #444 !important; font-size: 8pt !important; font-weight: normal; opacity: .8 !important;border: none !important;
+box-shadow: none !important;}
 .statuspanel-label {
 background: red !important;
 color: white !important;
@@ -21,12 +22,16 @@ color: white !important;
 /*status 4 evar hack  make this to 8px*/
 browser {margin-bottom: -5px !important ;     
 /*end of weirdness fixes*/
+
+
+border-right: 1px solid #d2d3d4 !important; 
 border-left: 1px solid #d2d3d4 !important; 
+border-bottom: 1px solid #d2d3d4 !important; 
 border-top: 1px solid #d2d3d4 !important; 
 }
 
 /* comment this out if you don't like or use the lesschrome extension to hide the nav-bar */
-#navigator-toolbox {margin-left: 22px !important;}
+#navigator-toolbox {margin-left: 21px !important;}
 
 
 
@@ -133,7 +138,10 @@ tab[busy] .tab-icon-image
     box-shadow: none !important;
     margin: 0 !important;
     padding: 0 !important;
-    padding-right: 4px !important;
+    padding-right: 2px !important;
+    padding-left: 0px !important;
+    margin-left: -4px !important;
+    border-radius: 0px !important;
 
 }
 
@@ -142,7 +150,7 @@ transition: all .7s ease .2s !important;
     background: transparent !important;
     
     border: none !important;
-    border: 1px solid rgba(0,0,0,.1) !important;
+    border: 1px solid #d2d3d4 !important;
     border-top: 4px solid rgba(0,0,0,.1) !important;
     border-right: 0px solid #d2d3d4 !important;
     border-bottom-left-radius: 0px ;
@@ -182,12 +190,13 @@ transition: all .2s ease .2s !important; transition-delay: .6s !important; margi
     margin-left: 0px !important;
     border-left: 1px solid #d2d3d4 !important;
 }
-#urlbar-container {margin-top: 0px !important;}
+#urlbar-container {margin-top: 1px !important;}
 
 #urlbar {
     font-size: 8pt !important;
     color: #595c66 !important;
     border: 1px solid #d2d3d4 !important;
+    border-top: none !important;
     border-radius: 2px !important;
     background: #fff !important;
     box-shadow: none !important;
@@ -275,7 +284,10 @@ transition: all .2s ease .2s !important; transition-delay: .6s !important; margi
     max-width: 328px !important;
     overflow: hidden !important;
     /*increase visible width by decreasing this margin*/
-    margin-right: -306px !important;
+    margin-right: -307px !important;
+    border-left: 1px solid #d2d3d4 !important; 
+border-bottom: 1px solid #d2d3d4 !important; 
+
 
 }
 .tabbrowser-tab > .tab-stack {
@@ -286,6 +298,9 @@ transition: all .2s ease .2s !important; transition-delay: .6s !important; margi
 
 #tabbrowser-tabs:hover {
     max-width: 328px !important; 
+
+     width: -moz-fit-content !important;
+ min-width: -moz-fit-content !important;
 }
 
 
@@ -298,16 +313,19 @@ transition: all .2s ease .2s !important; transition-delay: .6s !important; margi
     padding: 0px !important;
     border-top: 1px solid transparent !important;
 
-    margin-bottom: 0px !important;
-    background: transparent !important;
-        background: #505257 !important; /*dark example*/
-        background: transparent !important; /*light example*/
-
-    padding-left: 2px !important;
-    margin-top: 0px !important;
-    max-height: 11px !important;
-    min-height: 22px !important;
     
+
+
+        background: transparent; /*light example*/
+
+    padding-left: 1px !important;
+
+    margin-top: 0px !important;
+    max-height: 9px !important;
+    min-height: 22px !important;
+         max-width: -moz-fit-content !important; 
+     width: -moz-fit-content !important;
+ min-width: -moz-fit-content !important;
 
 }
 
@@ -328,18 +346,17 @@ box-shadow: none !important;
 }
 
 .tabbrowser-tab:hover {
-    background: #6f737f !important;
-    background: #56585e !important;
-    background: transparent !important;
-        background: #c0dbff !important;
+
+overflow: visible !important;
+
+        background: #c0dbff ;
+
 }
 
+.tabbrowser-tab {display: list-item !important;}
 
 .tabbrowser-tab[selected=true], .tabbrowser-tab[selected=true]:hover {
-    background: #ebeced !important;
-    background: #4c7bd9 !important;
-    background:  #999faa !important;
-    background: #c0dbff !important;
+
     background: #ffa1b2 !important;
     border-top: 1px solid #d2d3d4 !important;
     border-bottom: 1px solid #d2d3d4 !important;
@@ -360,7 +377,7 @@ box-shadow: none !important;
 .tabbrowser-tab:first-of-type[selected=true] {border-top: 1px solid rgba(255,255,255,.4) !important;
 box-shadow: 0px 1px 4px rgba(0,0,0,.1)!important;}
 
-.tabbrowser-tab:hover {background: #b2ffa1 !important;  
+.tabbrowser-tab:hover {background: #b2ffa1 !important;  background: #fff !important;      
             box-shadow: inset 0px 1px 1px rgba(255,255,255,.6),
                      0px 1px 4px rgba(0,0,0,.1)!important;}
 .tabbrowser-tab[selected=true] {background: #c0dbff !important;}
@@ -369,15 +386,18 @@ box-shadow: 0px 1px 4px rgba(0,0,0,.1)!important;}
 /*how the popup text will look*/
 .tab-text {
     font-size: 8pt !important;
-    text-align: center !important;
+    text-align: left !important;
+     max-width: -moz-fit-content !important; 
+     width: -moz-fit-content !important;
+ min-width: -moz-fit-content !important;
     margin-left: 1px !important;
-
+display: table-cell !important;
     margin-top: -2px !important;
     padding: 2px !important;
     margin-bottom: 0px !important;
     background: rgba(10,10,10,.8) !important;
     background: transparent !important; 
-    
+    pointer-events: none !important;
     border-radius: 4px !important;
 
     opacity: 0 ;
@@ -387,6 +407,10 @@ box-shadow: 0px 1px 4px rgba(0,0,0,.1)!important;}
 .tabbrowser-tab {    margin-right: 300px !important;
    min-width: 0px !important;
    overflow: hidden !important;
+        max-width: -moz-fit-content !important; 
+
+     width: -moz-fit-content !important;
+ min-width: -moz-fit-content !important;
 }
 .tabbrowser-tab:hover {
 margin-right: 0 !important; 
@@ -394,13 +418,23 @@ margin-right: 0 !important;
 /*bookmark*/
 }
 .tabbrowser-tab:hover .tab-text {
+
     opacity: 1 ;
     color: rgba(255,255,255,0.9) !important;
     font-size: 8pt !important;
-    font-weight: normal !important;
+    font-weight: bold !important;
     background: rgba(0,0,0,.6) !important;
+    background: #aaaaff !important;
+    background:  #425265 !important;
+    border: 2px solid  #425265 !important;
+    padding-right: 3px !important;
+width: -moz-fit-content !important;
+max-width: 328px !important;
     text-shadow: 1px 1px 1px black !important;
+    text-shadow: none !important;
     color: white !important;
+    box-shadow: 4px 4px 4px -2px rgba(10,10,10,.6) !important;
+    box-shadow: none !important;
 
 }
 
@@ -448,8 +482,11 @@ margin-right: 0 !important;
 #urlbar-reload-button,
 #urlbar-stop-button,
 #urlbar-go-button {
-    padding-top: 1px !important;
+    padding-top: 2px !important;
+    margin-top: -1px !important;
     border: none !important;
+    border-left: 1px solid #d2d3d4 !important;
+    border-top: 1px solid #d2d3d4 !important;
 }
 
 #urlbar-reload-button:hover,
@@ -588,6 +625,8 @@ margin-right: 0 !important;
 #reload-button .toolbarbutton-icon {
     list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QAWQBcAGYNNwV8AAAACXBIWXMAAA3XAAAN1wFCKJt4AAAAB3RJTUUH3QUYFCUVoThq8QAAASNJREFUOMvN0r9qVEEUBvDfLsFYSGCFVNEqzRYzQwJCthfTpcobaGNAC99ikyJ5hlhGsBFssk+QiIR7r0HbQNJKSKFuszYTuGzu3qydB4YzM4fvO9/5wz1WlNVRUVZPZsU7cxBM8At7GKYYfrcSFGX1AC/xCqvo1cLf8TbFMLr9WJgCr+AT1mcIejRFqFsDP8TnDL7ANpZzeIxd9FMMH+oEdQU7SBm8lmL4mYlHeJNi+NHaxKKsTvEM2ymGj+a0bu3ez/7YP9hCg5pJy0iXcI2bFMPStILz7J+3JNzM/ltTCYfZD4uy6jVkf4z9/Hzf1MRFnNQm8S73o4MXOMBTnGEjxTC+s4lzLNJXbKUYrppKkGK4xCDvxBf8yecUrzGog/8P+wtOP1JABqAOIwAAAABJRU5ErkJggg==) !important;
     -moz-image-region: rect(0,16px,16px,0)!important;
+        list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QAWQBcAGYNNwV8AAAACXBIWXMAAA3XAAAN1wFCKJt4AAAAB3RJTUUH3QUYFCUvZzSzQwAAAS1JREFUOMvN0r1KXVEQBeDPH8RCBBMEQa3S2CiKeYOgnZXVgVMpHAiawmewUQvtN5GQsGFDBJtAGn2DEL0EI6a1sBWxSAgE02zhcDler53TrL1nmDVrfnjEirL6XJTVxEPxni4I7vAbO9hKMfzpSFCU1QBWsIpXGKmFL/AuxXB87+hvSx7HF8w9IGiojVBvLXkQX3PyJZYxmsN/sY2pFMNBnaCu4C1mcvJsiuE6Ex9jPcXwq+MQi7L6htdYTjEc6tJ6a++pjEeeYP0Nau46rHQYN7hNMQy3KzjP+KZDwcWMP5ta+JhxqyirkYbqL7Cbv5+aWniPKm+iVZTVRp5HDxawh0m0sN94iV0c0gmWUgxX946+evTsx/fb6Zn5D7jCGF7iH06xibUUw41nZf8BvvpOA395qr0AAAAASUVORK5CYII=) !important;
+    -moz-image-region: rect(0,16px,16px,0)!important;
         opacity: 1.0 !important;
 }
 
@@ -602,6 +641,9 @@ margin-right: 0 !important;
 #stop-button .toolbarbutton-icon {
     list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QAWQBcAGYNNwV8AAAACXBIWXMAAA3XAAAN1wFCKJt4AAAAB3RJTUUH3QUYFCYTY3acBwAAALNJREFUOMvtkkEOwVAURQ8RYmBkAd3A/38Jpo0gUcywOmJEmiAShpbQdhVirkyY3IFUqQX0jV5u7nv/vJsPZVWyQhQnZ+AKTJ01N2lNYAW0nTWdd38tZ+kFGANhFCdDaSHgA+usOW/BDGhpYCNKHzgB88IThFzXawNJO2DirHlkvdUf+Ty/9IUhNoTeAw7ydIG9KO5FBEsNHxXmSH0fWPxzggdsgcBZkzprUiBQDl758z/rBbY4K1u1orxQAAAAAElFTkSuQmCC) !important;
     -moz-image-region: rect(0,16px,16px,0)!important;
+        list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QAWQBcAGYNNwV8AAAACXBIWXMAAA3XAAAN1wFCKJt4AAAAB3RJTUUH3QUYFCYlrMwJngAAALFJREFUOMvtkrEOAUEURQ8RolD5gP0T7UaQWDQbo92PmtbENGQTRELpc0RvaWhuIWtZH7Cverm57815NwNV1fJCbJIzcAXm3tmbtDawArre2d67v1Gw9AJMgTQ2yVhaCoTAOm8uWmCAjgY2ogyBE7AoPUHITb02krQDZt7ZR95b/5HP80tfGmJL6APgIE8f2IviXkbgNHxUmBP1Q2D5zwkBsAUi72zmnc2ASDkE1c//rBfBeiy5rGCXCAAAAABJRU5ErkJggg==) !important;
+    -moz-image-region: rect(0,16px,16px,0)!important;
+    
     opacity: 1.0 !important;
 }
 
@@ -615,6 +657,8 @@ margin-right: 0 !important;
 #urlbar-go-button .toolbarbutton-icon,
 #go-button .toolbarbutton-icon {
     list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QAWQBcAGYNNwV8AAAACXBIWXMAAA3XAAAN1wFCKJt4AAAAB3RJTUUH3QUYFCMorwqBZgAAAKNJREFUOMvNk70JAkEQhT9FrMISZqYAC7gCDPUKEC6zAlswFMHAyOhaEIyMd7cPQ4XDn0iQVY5lD8GXzbzhGx7DwK/lfBi3+f0ExsH5UHYBDIGd82H5zewlRHi8lVtgbirNByAabFMNlKZySY0QawKcnA+jXACAAZsugCMwzQXsgcJUzjlXWAOVqdxejUHi1juwMJVVbKQArsDMVOrcXyj4az0BwZQrx/cLT+4AAAAASUVORK5CYII=) !important;
+    -moz-image-region: rect(0,16px,16px,0)!important;
+        list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QAWQBcAGYNNwV8AAAACXBIWXMAAA3XAAAN1wFCKJt4AAAAB3RJTUUH3QUYFCQiAJ7+vwAAAKFJREFUOMvNkz0KAkEMhT9FPIVn8AAeYA9gN5p6EOw8gVewNIKFBGK1VxCs9jaWCuJPJcgqyzCL4OuSF77wCIFfK0gcNfndBMYhSJQ2gD6wCxKX38xOQoTHW7kFZm56/QDUBptUAuKm59QIdY2BKkgc5AIAhsCmDeAITHIBe6Bw01POFdbA3E1vr0YvcesdWLjpqm6kAC7A1E3L3F8o+Gs9ARChKQsCJM/KAAAAAElFTkSuQmCC) !important;
     -moz-image-region: rect(0,16px,16px,0)!important;
     opacity: 1.0 !important;
 }
@@ -645,6 +689,68 @@ margin-right: 0 !important;
     opacity: 0.9 !important;
     transition: all 0.1s ease 0s;
 }
+
+
+#back-button {border-radius: 0px !important; background: #f6f6f6!important;
+padding-top: 2px !important; margin-left: -1px !important; margin-right: -1px !important; padding-left: 2px !important; padding-right: 2px !important;box-shadow: none !important;}
+#forward-button, #reload-button,
+#stop-button,
+#downloads-indicator,
+#downloads-button,
+#appmenu-toolbar-button, 
+#tabview-button,
+#bookmarks-menu-button,
+#bookmarks-button,
+#home-button,
+#alltabs-button {border-radius: 0px !important; background: #f6f6f6!important;
+padding-top: 2px !important; margin-left: -1px !important; margin-right: -1px !important; padding-left: 2px !important; padding-right: 2px !important; border-right: none !important;
+border-left: none !important; box-shadow: none !important; }
+#forward-button, #home-button {border-top-left-radius: 0px !important; border-bottom-left-radius: 0px !important;}
+#urlbar {margin-left: -1px !important; margin-right: 0px !important; border-radius: 0px !important;}
+#nav-bar {padding: 0px !important; background: transparent !important; border-bottom: none !important; border-top: 3px solid red !important; }
+#navigator-toolbox {padding: 0px !important; background: transparent !important; border: none !important; }
+#ulrbar, #urlbar * {border-left: none !important; border-right: none !important; box-shadow: none !important;}
+#nav-bar * {box-shadow: none !important;}
+
+
+#back-button, #forward-button, #reload-button,
+#stop-button,
+#downloads-indicator,
+#downloads-button,
+#appmenu-toolbar-button, 
+#tabview-button,
+#bookmarks-menu-button,
+#bookmarks-button,
+#home-button,
+#alltabs-button,#urlbar, #urlbar *{ transition: background .3s ease .02s !important; border-color: #d2d3d4 !important; border-radius: 0px !important;}
+
+#urlbar-reload-button,
+#urlbar-stop-button,
+#urlbar-go-button {background: #f6f6f6 !important; border-left: 1px solid #d2d3d4 !important; }
+
+
+
+#urlbar-reload-button:hover,
+#urlbar-stop-button:hover,
+#urlbar-go-button:hover,
+#forward-button:hover, #reload-button:hover,
+#stop-button:hover, #back-button:hover,
+#downloads-indicator:hover,
+#downloads-button:hover,
+#appmenu-toolbar-button:hover, 
+#tabview-button:hover,
+#bookmarks-menu-button:hover,
+#bookmarks-button:hover,
+#home-button:hover,
+#alltabs-button:hover
+{background:  #fff !important;}
+#appmenu-toolbar-button {border-right: 2px solid #d2d3d4 !important;}
+
+
+#back-button .toolbarbutton-icon {visibility: visible;}
+
+
+
 
 /* Make tabs fit all horizontal width available, no matter how many there are 
 and make Firefox tabs close properly even though max-width is overridden */
@@ -753,4 +859,18 @@ scrollbar thumb:hover {
 background: pink !important;
 border-color: lime !important;
 }
+
+
+.tabbrowser-tab {transition: background .3s ease .02s !important;}
+
+.tabbrowser-tab[titlechanged] .tab-icon-image {transform: translateZ(0);
+
+/*animation: newpost .9s ease infinite;*/ }
+
+.tabbrowser-tab[titlechanged] {}
+
+@keyframes newpost {
+  25% {  transform: scale(1.1);   }
+}
+
 
