@@ -8,7 +8,7 @@ Forked from and entirely inspired by the brilliant [Flèche](https://github.com/
 * Install the [Mozilla labs lesschrome](https://addons.mozilla.org/en-US/firefox/addon/prospector-lessChrome-HD/) extension.
 * RESTART FIREFOX
 * Go to your [Add-ons Manager](about:addons), select the User Styles page and then write a new style.
-* Give the style a name and paste the contents of [browser_style.css](https://raw.github.com/offlineric/easymode/master/browser_style.css). Or [browser_style_light.css](https://github.com/offlineric/easymode/master/browser_style_light.css) if you prefer.
+* Give the style a name and paste the contents of [browser_style.css](https://raw.github.com/offlineric/easymode/master/browser_style.css). Or [browser_style_light.css](https://raw.github.com/offlineric/easymode/master/browser_style_light.css) if you prefer.
 * Seriously restart firefox if it looks wrong. If it still looks wrong after that, I guess you can use the issues tracker.
 
 * Customize toolbar and place the home button immediately to the left of urlbar or else it won't look closed on that side. 
