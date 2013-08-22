@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name        ricechan
+// @name        testicles
 // @namespace   eric
 // @description insert parent selectors jscript
 // @include     https://boards.4chan.org/*
@@ -12,6 +12,7 @@
 // @grant          GM_addStyle
 // @version     1
 // @require    http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js
+
 // ==/UserScript==
 
 
@@ -45,44 +46,32 @@
     
 })(jQuery);
 
+var $modules = $('.postContainer, .summary');
 $(window).scroll(function(event) {
-  
-  $(".postContainer").each(function(i, el) {
-    var el = $(el);
-    if (el.visible(true)) {
-      el.addClass("come-in"); 
+  $modules.each(function(i, el) {
+    var $el = $modules.eq(i);
+    if ($el.visible(true)) {
+      $modules
+        .splice(i, 1);
+      $el
+        .addClass("come-in")
+
     } 
   });
-  
 });
 
 var win = $(window);
-var allMods = $(".postConatiner");
+
+
+var allMods = $(".postContainer, .summary");
 
 // Already visible modules
 allMods.each(function(i, el) {
   var el = $(el);
   if (el.visible(true)) {
-    el.addClass("already-visible"); 
+    el.addClass("come-in"); 
   } 
 });
-
-win.scroll(function(event) {
-  
-  allMods.each(function(i, el) {
-    var el = $(el);
-    if (el.visible(true)) {
-      el.addClass("come-in"); 
-    } 
-  });
-  
-});
-
-
-
-
-
-
 var num = 90; //number of pixels before modifying styles
 
 $(window).bind('scroll', function () {
@@ -93,9 +82,20 @@ $(window).bind('scroll', function () {
     }
 });
 
-window.scrollBy(0,1);
-window.scrollBy(0,-1);
 
 
+    /* time of day classes 
 
-
+$(document).ready(function() {
+    var h = new Date().getHours();
+    var divs = $('#header-bar, .boardTitle');
+    if (h >= 6 && h < 12) {
+        divs.addClass('morning-bg');
+    } else if (h >= 12 && h < 18) {
+        divs.addClass('daylight-bg');
+    } else if (h >= 18 && h < 24) {
+        divs.addClass('evening-bg');
+    } else if (h >= 0 && h < 6) {
+        divs.addClass('twilight-bg');
+    }
+}); 
