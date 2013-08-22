@@ -98,4 +98,4 @@ $(document).ready(function() {
     } else if (h >= 0 && h < 6) {
         divs.addClass('twilight-bg');
     }
-}); 
+}); */
